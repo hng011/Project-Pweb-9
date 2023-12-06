@@ -36,6 +36,7 @@
         
         {{-- TODO : Add ROute!!!!! --}}
         {{-- <p><a href="#" class="register-link">Resend code</a></p> --}}
+        {{-- DONT FORGET!! --}}
       </div>
     </form>
   </div>
