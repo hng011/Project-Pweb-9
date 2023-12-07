@@ -36,7 +36,7 @@
 
     @if(session()->has('emailFailed'))
       <script>
-        alert('{{$emailFailed}}');
+        alert("{{session('emailFailed')}}");
       </script>
     @endif
 
