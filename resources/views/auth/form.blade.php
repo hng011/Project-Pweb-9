@@ -23,23 +23,23 @@
       </script>
     @endif
 
-    @if ($errors->any())
-      @foreach ($errors->all() as $error)
-      <!-- message error login/register disini coy kalo mau pake, see UserAuthController login & register function -->
-
-      <!-- css bodynya gabisa di override :( -->
-      <div style="position: static;">
-        <h1 style="background-color: red;">{{$error}}</h1>
-      </div>
-      @endforeach
-    @endif
+    
 
     @if(session()->has('emailFailed'))
       <script>
         alert("{{session('emailFailed')}}");
       </script>
     @endif
-
+    
+<div>
+  @if ($errors->any())
+      @foreach ($errors->all() as $error)
+      <!-- message error login/register disini coy kalo mau pake, see UserAuthController login & register function -->
+      <!-- css bodynya gabisa di override :( -->      
+      <p style="color: red">{{$error}}</p>
+      @endforeach
+    @endif
+</div>
 <div class="wrapper">
     <span class="bg-animate"></span>
     <span class="bg-animate2"></span>
@@ -64,7 +64,7 @@
       </div>
     </form>
   </div>
-    <div class="info-text login">
+  <div class="info-text login">
       <h2 class="animation" style="--i:0; --j:20;">DDHZ Todos</h2>
       <p class="animation" style="--i:1; --j:21;">Let's list your tasks!</p>
     </div>
